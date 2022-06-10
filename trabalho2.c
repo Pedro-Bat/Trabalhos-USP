@@ -10,7 +10,7 @@ void main()
 
    comeco:// local onde o goto deve voltar
     printf("Jogo de advinhacao \n\nNesse jogo voce tem que acertar um numero gerado aleatoriamente, digite o limite desse numero: ");
-       scanf("%d", i) // scaneia o limite para gerar um numero
+       scanf("%d", &i) // scaneia o limite para gerar um numero
         n = rand () % i;
 
         do{ //Estrutura de repeticao para tentar novamente caso erre o valor
