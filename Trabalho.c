@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Trabalho Prático IC1 Primeiro Exercicio.
+//Aluno: Pedro Henrique Mendes de Lima Nº USP: 13823051
 
 
 int main()
@@ -24,7 +26,8 @@ int media_ponderada(int num1, int num2, int num3, int num4, int num5);
   int verificacao = 1;
 
 
-comeco: printf("digite 5 valores para serem calculados \n"); //recebendo valores
+comeco:
+printf("digite 5 valores para serem calculados \n"); //recebendo valores
 printf("digite o valor para o primeiro numero:  ");
     scanf("%d", &num1);
 printf("digite o valor para o segundo numero:  ");
@@ -165,8 +168,8 @@ int maior(int num1, int num2, int num3, int num4, int num5) //funcao que verific
 int menor(int num1, int num2, int num3, int num4, int num5) //funcao que verifica o maior entre os valores digitados
 {
 
-        float menor;
- if(num1<num2)
+    float menor; // declarando variaveis
+ if(num1<num2) // verificacoes
      menor = num1;
     else 
         menor = num2;
