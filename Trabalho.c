@@ -11,33 +11,34 @@ int main()
    
 
     //declarando funcoes
-int media(int num1, int num2, int num3, int num4, int num5);
-int maior(int num1, int num2, int num3, int num4, int num5);
-int menor(int num1, int num2, int num3, int num4, int num5);
-float desvio_padrao(int num1, int num2, int num3, int num4, int num5);
-int media_ponderada(int num1, int num2, int num3, int num4, int num5);
+float media(float num1, float num2, float num3, float num4, float num5);
+float maior(float num1, float num2, float num3, float num4, float num5);
+float menor(float num1, float num2, float num3, float num4, float num5);
+float desvio_padrao(float num1, float num2, float num3, float num4, float num5);
+float media_ponderada(float num1, float num2, float num3, float num4, float num5);
   
-  int num1, num2, num3, num4, num5; int n;//declarando variaveis
-  int media1 = 0;
-  int mediaP = 0;
-  int maior1 = 0;
-  int menor1 = 0;
+  float num1, num2, num3, num4, num5; int n;//declarando variaveis
+  float media1 = 0;
+  float mediaP = 0;
+  float maior1 = 0;
+  float menor1 = 0;
   float desvio = 0; 
   int verificacao = 1;
 
 
 comeco:
-printf("digite 5 valores para serem calculados \n"); //recebendo valores
+printf("digite 5 valores para serem calculados \n\n"); //recebendo valores
 printf("digite o valor para o primeiro numero:  ");
-    scanf("%d", &num1);
+    scanf("%f", &num1);
 printf("digite o valor para o segundo numero:  ");
-    scanf("%d", &num2);
+    scanf("%f", &num2);
 printf("digite o valor para o terceiro numero:  ");
-    scanf("%d", &num3);
+    scanf("%f", &num3);
 printf("digite o valor para o quarto numero:  ");
-    scanf("%d", &num4);   
+    scanf("%f", &num4);   
 printf("digite o valor para o quinto numero:  ");
-    scanf("%d", &num5);
+    scanf("%f", &num5);
+    system("cls");
 
 printf("\n Escolha uma das seguintes opcoes de calculo\n\n"); //escolher entre as opções
 printf(" Digita 1 para calcular a media dos valores\n");
@@ -47,46 +48,47 @@ printf(" Digite 4 para descobrir o maior dos valores digitados\n");
 printf(" Digite 5 para calcular o desvio padrao\n");
 printf(" Digite 6 para ver os numeros digitados\n");
     scanf("%d", &n);
+    system("cls");
 
     switch (n) //opcoes
     {
          case 1:
           media1 = media(num1, num2, num3, num4, num5);
-          printf(" A media dos valores e: %d",  media1);
+          printf(" A media dos valores e: %.2f",  media1);
 
           break;
 
          case 2:
          mediaP = media_ponderada(num1, num2, num3, num4, num5);
-          printf(" A media ponderada dos valores e: %d", mediaP);
+          printf("\n A media ponderada dos valores e: %.2f", mediaP);
 
           break;
 
          case 3:
           menor1 = menor(num1, num2, num3, num4, num5);
-          printf(" O menor numero digitado foi o: %d", menor1);
+          printf(" O menor numero digitado foi o: %.2f", menor1);
 
           break;
 
          case 4:
           maior1 = maior(num1,num2, num3, num4, num5);
-          printf(" O maior numero digitado foi o: %d", maior1);
+          printf(" O maior numero digitado foi o: %.2f", maior1);
 
           break;
 
          case 5:
           desvio = desvio_padrao(num1, num2, num3, num4, num5);
-          printf(" O desvio padrao calculado para os valores e: %f", desvio);
+          printf(" O desvio padrao calculado para os valores e: %.2f", desvio);
 
           break;
 
          case 6:
           printf("Os numeros digitados foram:\n");
-          printf("%f\n", num1);
-          printf("%f\n", num2);
-          printf("%f\n", num3);
-          printf("%f\n", num4);
-          printf("%f\n", num5);
+          printf("%.2f\n", num1);
+          printf("%.2f\n", num2);
+          printf("%.2f\n", num3);
+          printf("%.2f\n", num4);
+          printf("%.2f\n", num5);
 
           break;
 
@@ -101,38 +103,40 @@ printf(" Digite 6 para ver os numeros digitados\n");
     scanf("%d", &verificacao);
      
      if(verificacao == 0)
+     system("cls");
       goto comeco;
+      
 
 return 0;
 
 }
 
-int media(int num1, int num2, int num3, int num4, int num5) //funcao que calcula a media aritimetica
+float media(float num1, float num2, float num3, float num4, float num5) //funcao que calcula a media aritimetica
 {
-    int med = 0, soma = 0; // declaracao das variaveis
+    float med = 0, soma = 0; // declaracao das variaveis
     soma = num1+num2+num3+num4+num5; // calculo da media
     med = soma/5;
   return med;
 }
 
 
-int media_ponderada(int num1, int num2, int num3, int num4, int num5) // funcao que calcula a media ponderada
+float media_ponderada(float num1, float num2, float num3, float num4, float num5) // funcao que calcula a media ponderada
 {
-int medP = 0, mult1 = 0, mult2 = 0, mult3 = 0, mult4 = 0, mult5 = 0; //declaracao de variaveis
+float medP = 0, mult1 = 0, mult2 = 0, mult3 = 0, mult4 = 0, mult5 = 0; //declaracao de variaveis
 
 printf("\nEscreva o valor a ser considerado para cada numero\n"); // pegando do usuario os valores a serem multiplicados
 printf("digite o valor para o primeiro numero: ");
-    scanf("%d", &mult1);
+    scanf("%f", &mult1);
 printf("digite o valor para o segundo numero: ");
-    scanf("%d", &mult2);
+    scanf("%f", &mult2);
 printf("digite o valor para o terceiro numero: ");
-    scanf("%d", &mult3);
+    scanf("%f", &mult3);
 printf("digite o valor para o quarto numero: ");
-    scanf("%d", &mult4);
+    scanf("%f", &mult4);
 printf("digite ovalor para o quinto numero: ");
-    scanf("%d", &mult5);
+    scanf("%f", &mult5);
 
-num1 *= mult1; //atribuindo os valores 
+num1 *= mult1; //ponderando os valores 
 num2 *= mult2;
 num3 *= mult3;
 num4 *= mult4;
@@ -144,9 +148,9 @@ return medP;
 }
 
 
-int maior(int num1, int num2, int num3, int num4, int num5) //funcao que verifica o maior entre os valores digitados
+float maior(float num1, float num2, float num3, float num4, float num5) //funcao que verifica o maior entre os valores digitados
 {
-    int maior; //declaracao de variaveis
+    float maior; //declaracao de variaveis
  if( num1>num2) //verificacoes
      maior = num1;
     else
@@ -165,7 +169,7 @@ int maior(int num1, int num2, int num3, int num4, int num5) //funcao que verific
 }
 
 
-int menor(int num1, int num2, int num3, int num4, int num5) //funcao que verifica o maior entre os valores digitados
+float menor(float num1, float num2, float num3, float num4, float num5) //funcao que verifica o maior entre os valores digitados
 {
 
     float menor; // declarando variaveis
@@ -188,10 +192,10 @@ int menor(int num1, int num2, int num3, int num4, int num5) //funcao que verific
     
 }
 
-float desvio_padrao(int num1, int num2, int num3, int num4, int num5) // funcao que calcula desvio padrao
+float desvio_padrao(float num1, float num2, float num3, float num4, float num5) // funcao que calcula desvio padrao
 {
-int dif1, dif2, dif3, dif4, dif5;  // declarando variaveis
-int med; float desvio;
+float dif1, dif2, dif3, dif4, dif5;  // declarando variaveis
+float med, desvio;
 
  med = (num1+num2+num3+num4+num5)/5; // calculo da media
 
