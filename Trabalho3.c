@@ -4,6 +4,14 @@
 // Trabalho Prático IC1 Terceiro Exercicio.
 // Aluno: Pedro Henrique Mendes de Lima Nº USP: 13823051
 
+/*
+- Crie e leia um vetor de inteiros de n posições;
+- Crie e leia um vetor de inteiros de m posições;
+- Crie e construa um vetor de inteiros que seja a interseção entre os dois
+vetores anteriores, ou seja, que contém apenas os números que estão em
+ambos os vetores. Não deve conter números repetidos.
+*/
+void clearScreen();
 int main()
 {  
    //Declarando variaveis 
@@ -14,7 +22,7 @@ int main()
     scanf(" %d", &n);
     scanf(" %d", &m);
 
-    system("cls");
+    cleaScreen();
     
     //Determinando o tamanho do vetor interseccao
     if(m>n) 
@@ -32,14 +40,13 @@ int main()
   for(i=0 ; i<n; i++)
     scanf(" %d", &vetor1[i]);
 
-  system("cls"); 
+  clearScreen();
 
   printf("Escreva os valores para o segundo vetor de tamanho %d\n\n", m);
   for(i=0; i<m; i++)
     scanf(" %d", &vetor2[i]);
 
-  system("cls");
-
+  clearScreen();
     //Achando interseccao entre vetores
   for( i=0; i<n; i++){
     for(j=0; j<m; j++){
@@ -51,7 +58,7 @@ int main()
 
    //Eliminando valores iguais
 for(i= 0; i<intrs; i++)
- for(j=i+1; j<10; j++)
+ for(j=i+1; j<intrs; j++)
    if(vetor3[i] == vetor3[j])
       vetor3[j] = 0;
   
@@ -70,11 +77,20 @@ printf(" Interseccao: {");
   scanf(" %d", &voltar);
   if(voltar == 0){
 
-    system("cls");
+   clearScreen();
       goto comeco;
   }
 
-system("pause");
 return 0;
 }
 
+void clearScreen()
+{
+  #ifdef _WIN64
+    system("cls");
+  #elif __linux
+    system("clear");
+  #else
+  #endif
+
+}
