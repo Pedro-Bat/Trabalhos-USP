@@ -5,7 +5,15 @@
 // Trabalho Prático IC1 Primeiro Exercicio.
 //Aluno: Pedro Henrique Mendes de Lima Nº USP: 13823051
 
+/*
+  Faça um programa que leia 5 números. Este programa deve ter um menu que permita ao
+ usuário escolher qual opção de cálculo ele deseja realizar: média aritmética simples,
+ média ponderada (ler os pesos associados a cada nota que serão informados pelo
+ usuário), desvio padrão, maior valor e menor valor. A leitura dos 5 valores também deve
+ ser uma das opções do menu.
+*/
 
+void clearScreen();
 int main()
 {
    
@@ -23,32 +31,33 @@ float media_ponderada(float num1, float num2, float num3, float num4, float num5
   float maior1 = 0;
   float menor1 = 0;
   float desvio = 0; 
-  int verificacao = 1;
+  int verificacao = 9;
 
 
 comeco:
-printf("digite 5 valores para serem calculados \n\n"); //recebendo valores
-printf("digite o valor para o primeiro numero:  ");
+printf(" Digite 5 valores para serem calculados \n\n"); //recebendo valores
+printf(" Digite o valor para o primeiro numero:  ");
     scanf("%f", &num1);
-printf("digite o valor para o segundo numero:  ");
+printf(" Digite o valor para o segundo numero:  ");
     scanf("%f", &num2);
-printf("digite o valor para o terceiro numero:  ");
+printf(" Digite o valor para o terceiro numero:  ");
     scanf("%f", &num3);
-printf("digite o valor para o quarto numero:  ");
+printf(" Digite o valor para o quarto numero:  ");
     scanf("%f", &num4);   
-printf("digite o valor para o quinto numero:  ");
+printf(" Digite o valor para o quinto numero:  ");
     scanf("%f", &num5);
-    system("cls");
+    clearScreen();
 
-printf("\n Escolha uma das seguintes opcoes de calculo\n\n"); //escolher entre as opções
-printf(" Digita 1 para calcular a media dos valores\n");
+do{
+printf(" Escolha uma das seguintes opcoes de calculo\n\n"); //escolher entre as opções
+printf(" Digite 1 para calcular a media dos valores\n");
 printf(" Digite 2 para calcular a media ponderada dos valores \n");
 printf(" Digite 3 para descobrir o menor dos valores digitados\n");
 printf(" Digite 4 para descobrir o maior dos valores digitados\n");
 printf(" Digite 5 para calcular o desvio padrao\n");
 printf(" Digite 6 para ver os numeros digitados\n");
     scanf("%d", &n);
-    system("cls");
+    clearScreen();
 
     switch (n) //opcoes
     {
@@ -99,13 +108,16 @@ printf(" Digite 6 para ver os numeros digitados\n");
     
     }
 
-     printf("\n\nSe quiser voltar ao inicio aperte 0\n");
+     printf("\n\nSe quiser fazer um novo calculo com esses valores aperte qualquer numero diferente de 0\nSe quiser novos valores aperte 0\n");
     scanf("%d", &verificacao);
-     
-     if(verificacao == 0)
-     system("cls");
-      goto comeco;
-      
+    clearScreen();
+         
+}while(verificacao != 0);
+
+if(verificacao == 0 )
+ clearScreen();
+ goto comeco;
+  
 
 return 0;
 
@@ -117,34 +129,6 @@ float media(float num1, float num2, float num3, float num4, float num5) //funcao
     soma = num1+num2+num3+num4+num5; // calculo da media
     med = soma/5;
   return med;
-}
-
-
-float media_ponderada(float num1, float num2, float num3, float num4, float num5) // funcao que calcula a media ponderada
-{
-float medP = 0, mult1 = 0, mult2 = 0, mult3 = 0, mult4 = 0, mult5 = 0; //declaracao de variaveis
-
-printf("\nEscreva o valor a ser considerado para cada numero\n"); // pegando do usuario os valores a serem multiplicados
-printf("digite o valor para o primeiro numero: ");
-    scanf("%f", &mult1);
-printf("digite o valor para o segundo numero: ");
-    scanf("%f", &mult2);
-printf("digite o valor para o terceiro numero: ");
-    scanf("%f", &mult3);
-printf("digite o valor para o quarto numero: ");
-    scanf("%f", &mult4);
-printf("digite ovalor para o quinto numero: ");
-    scanf("%f", &mult5);
-
-num1 *= mult1; //ponderando os valores 
-num2 *= mult2;
-num3 *= mult3;
-num4 *= mult4;
-num5 *= mult5;
-
-medP = (num1+num2+num3+num4+num5)/5; // calculo da media ponderada
-
-return medP;
 }
 
 
@@ -192,6 +176,7 @@ float menor(float num1, float num2, float num3, float num4, float num5) //funcao
     
 }
 
+
 float desvio_padrao(float num1, float num2, float num3, float num4, float num5) // funcao que calcula desvio padrao
 {
 float dif1, dif2, dif3, dif4, dif5;  // declarando variaveis
@@ -208,4 +193,45 @@ float med, desvio;
  desvio = sqrt((dif1 + dif2 + dif3 + dif4 + dif5)/5);
 
  return desvio;
+}
+
+
+float media_ponderada(float num1, float num2, float num3, float num4, float num5) // funcao que calcula a media ponderada
+{
+float medP = 0, mult1 = 0, mult2 = 0, mult3 = 0, mult4 = 0, mult5 = 0; //declaracao de variaveis
+
+printf(" Escreva o valor a ser considerado para cada numero\n\n"); // pegando do usuario os valores a serem multiplicados
+printf(" Digite o valor para o primeiro numero: ");
+    scanf("%f", &mult1);
+printf(" Digite o valor para o segundo numero: ");
+    scanf("%f", &mult2);
+printf(" Digite o valor para o terceiro numero: ");
+    scanf("%f", &mult3);
+printf(" Digite o valor para o quarto numero: ");
+    scanf("%f", &mult4);
+printf(" Digite ovalor para o quinto numero: ");
+    scanf("%f", &mult5);
+
+num1 *= mult1; //ponderando os valores 
+num2 *= mult2;
+num3 *= mult3;
+num4 *= mult4;
+num5 *= mult5;
+
+medP = (num1+num2+num3+num4+num5)/5; // calculo da media ponderada
+
+return medP;
+}
+
+void clearScreen()
+{
+  #ifdef _WIN64
+    system("cls");
+  #elif __linux
+    system("clear");
+  #elif _WIN32
+    system("cls");
+  #else
+  #endif
+
 }
