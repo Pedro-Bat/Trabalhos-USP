@@ -2,7 +2,7 @@
 Trabalhos feitos na disciplina de introdução a computação
 
 
-                                    PRIMEIRO TRABALHO PRÁTICO
+                                        TRABALHOS
 1. Faça um programa que leia 5 números. Este programa deve ter um menu que permita ao
 usuário escolher qual opção de cálculo ele deseja realizar: média aritmética simples,
 média ponderada (ler os pesos associados a cada nota que serão informados pelo
