@@ -2,7 +2,7 @@
 Trabalhos feitos na disciplina de introdução a computação
 
 
-                                        TRABALHOS
+                                        TRABALHOS IC1
 1. Faça um programa que leia 5 números. Este programa deve ter um menu que permita ao
 usuário escolher qual opção de cálculo ele deseja realizar: média aritmética simples,
 média ponderada (ler os pesos associados a cada nota que serão informados pelo
@@ -22,3 +22,17 @@ de felicitações para o nosso usuário e indicando o número total de tentativa
  Crie e construa um vetor de inteiros que seja a interseção entre os dois vetores 
 anteriores, ou seja, que contém apenas os números que estão em
 ambos os vetores. Não deve conter números repetidos.
+
+                                        TAREFAS IC2
+1. Escrever um programa em C++ que
+// A. Possua uma estrutura chamada estudante com os seguinte elementos
+// Numero USP
+// Nota da primeira prova
+// Nota da segunda prova
+// Média final
+// B. Tenha um menu que permita realizar as seguintes operações
+// 1. Entrar com dados de um estudante (número USP e notas das provas)
+// 2. Mostrar dados de um estudante
+// 3. Mostrar a média e desvio padrão para as médias finais de todos os estudantes cadastrados
+// 4. Sair
+
