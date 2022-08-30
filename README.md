@@ -24,7 +24,7 @@ anteriores, ou seja, que contém apenas os números que estão em
 ambos os vetores. Não deve conter números repetidos.
 
                                                      TAREFAS IC2
-1. Escrever um programa em C++ que
+4. Escrever um programa em C++ que
 // A. Possua uma estrutura chamada estudante com os seguinte elementos
 // Numero USP
 // Nota da primeira prova
