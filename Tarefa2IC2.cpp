@@ -56,7 +56,7 @@ int main() {
     tempo2 = clock();
 
     tempo_total = tempo_total = difftime(tempo2, tempo1) / CLOCKS_PER_SEC;
-	cout << "\nTempo da funcao 1 = " << tempo_total << " segundos\n";
+    cout << "\nTempo da funcao 1 = " << tempo_total << " segundos\n";
     cout << "media funcao 1= " << A[n-1] << "\n\n";
 
 	
@@ -78,7 +78,7 @@ int main() {
 	tempo4 = clock();
 	tempo_total = tempo_total = difftime(tempo4, tempo3) / CLOCKS_PER_SEC;
 	cout << "Tempo da funcao 2 = " << tempo_total << " segundos\n";
-    cout << "media funcao 2= " << A[n-1];
+        cout << "media funcao 2= " << A[n-1];
 
 
     cout << "\n\ndigite 1 para novos valores";
