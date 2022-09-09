@@ -36,6 +36,6 @@ ambos os vetores. Não deve conter números repetidos.
 // 3. Mostrar a média e desvio padrão para as médias finais de todos os estudantes cadastrados
 // 4. Sair
 
-5. Utilizando a Lib "<ctime>" fazer testes de velocidade de execução de funções que calculam a 
+5. Utilizando a Lib "ctime" fazer testes de velocidade de execução de funções que calculam a 
 média aritmética de dois  vetores de n tamanho e plotar os resultados em gráfico.
 
