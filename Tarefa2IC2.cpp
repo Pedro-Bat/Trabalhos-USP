@@ -44,16 +44,16 @@ int main() {
 
 	}
 	
-	tempo1 = clock();
 
 	
 
-	for (int i = 0; i < n; i++) {
+	tempo1 = clock();
+	
 		prefixmedia1(X, A, n);
-	}
+	
+        tempo2 = clock();
 
     
-    tempo2 = clock();
 
     tempo_total = tempo_total = difftime(tempo2, tempo1) / CLOCKS_PER_SEC;
     cout << "\nTempo da funcao 1 = " << tempo_total << " segundos\n";
@@ -61,24 +61,20 @@ int main() {
 
 	
 
-	
 
 
 	tempo3 = clock();
-
 	
-
-	for (int i = 0; i < 5; i++) {
 		prefixmedia2(X, A, n);
-	}
+	
+        tempo4 = clock();
 
 
 
 	
-	tempo4 = clock();
-	tempo_total = tempo_total = difftime(tempo4, tempo3) / CLOCKS_PER_SEC;
-	cout << "Tempo da funcao 2 = " << tempo_total << " segundos\n";
-        cout << "media funcao 2= " << A[n-1];
+    tempo_total = tempo_total = difftime(tempo4, tempo3) / CLOCKS_PER_SEC;
+    cout << "Tempo da funcao 2 = " << tempo_total << " segundos\n";
+    cout << "media funcao 2= " << A[n-1];
 
 
     cout << "\n\ndigite 1 para novos valores";
@@ -94,7 +90,8 @@ return 0;
 
 void prefixmedia1(float *X, float *A, int n) {
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < n; i++) 
+	{
 		int a = 0;
 		for (int j = 0; j <= i; j++) {
 			a = a + X[j];
@@ -107,17 +104,17 @@ void prefixmedia1(float *X, float *A, int n) {
 
 void prefixmedia2(float *X, float *A, int n) {
 
-
 	int s = 0;
 
-	for (int i = 0; i < n ; i++) {
+	for (int i = 0; i < n ; i++) 
+	{
 		s = s + X[i];
-		A[i] = s / (i + 1);
+		A[i] = s / (i+1);
+	}
+}
 		
 
-	}
 	
-}
 
 void clearScreen()
 {
@@ -129,7 +126,7 @@ void clearScreen()
     system("cls");
   #else
   #endif
-
 }
+
 
 
