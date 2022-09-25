@@ -39,3 +39,11 @@ ambos os vetores. Não deve conter números repetidos.
 5. Utilizando a Lib "ctime" fazer testes de velocidade de execução de funções que calculam a 
 média aritmética de dois  vetores de n tamanho e plotar os resultados em gráfico.
 
+6. Seja uma função (subrotina) que, dado um vetor v com n inteiros e um inteiro x
+(chave de busca), retorne o índice da primeira ocorrência de x em v; caso não
+encontre x no vetor v, a função deve retornar o valor -1. O número de operações
+primitivas desta função deve ser constante para o melhor caso, enquanto que para
+o pior caso, o número de operações primitivas deve ser linear em n. Pede-se:
+a) Implemente a função em C++.
+b) Faça a análise por operações primitivas da função.
+
