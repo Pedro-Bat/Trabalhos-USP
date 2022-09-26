@@ -54,9 +54,9 @@ int funcBusca(int *vetor, int x, int n)
             return i;                     //                              | 1
         }                                 //                              |
                                           //                              |
-        else if (i + 1 == n)              // 2                            |
+        else if (i + 1 == n)              // 2(n)                         |
         {                                 //                              |
             return -1;                    // 1                            |
-        }                                 // total: 4 + 5n                | total: 5
+        }                                 // total: 4 + 7n                | total: 5
     }
 }
