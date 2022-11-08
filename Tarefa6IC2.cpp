@@ -3,7 +3,7 @@
 #include <iomanip>
 
 
-//
+/*
 A prefeitura de uma cidade faz uma pesquisa sobre os domicílios na área urbana. Em
 cada domicilio, são coletados dados sobre renda média mensal, número total de
 ocupantes, endereço e número de ocupantes em idade escolar. Faça:
@@ -15,7 +15,7 @@ i. Listar todos os domicílios, com as respectivas informações;
 ii. Buscar os dados do domicílio quando um determinado endereço é
 digitado. Para a busca, deve-se utilizar busca binária;
 iii. Sair.
-//
+*/
 
 using namespace std;
 
