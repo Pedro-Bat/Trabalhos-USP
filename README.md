@@ -59,9 +59,7 @@ ii. Buscar os dados do domicílio quando um determinado endereço é
 digitado. Para a busca, deve-se utilizar busca binária;
 iii. Sair.
 
-8. Aluno: Pedro Henrique Mendes de LIma
-  N° USP: 13823051
-  Seja um registro (estrutura) com os campos: nome (string) e número de inscrição (int).
+8. Seja um registro (estrutura) com os campos: nome (string) e número de inscrição (int).
 Pede-se
 a. Faça uma função para ordenar, via QuickSort, um vetor com N registros. A
 ordenação deve ser de acordo com o número de inscrição;
