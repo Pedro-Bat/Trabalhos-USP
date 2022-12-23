@@ -72,5 +72,29 @@ inscrição é apresentado):
  45 56 12 43 95 19 8 67
  8 12 19 43 45 56 67 95
  95 67 56 45 43 19 12 8
+ 
+ 9. Sejam os seguintes algoritmos de ordenação:
+ Inserção direta
+ Inserção binária
+ Seleção
+ Bubblesort
+ Heapsort
+ Fusão
+ QuickSort
+Pede-se:
+a) Implemente os algoritmos relacionados para vetores de
+inteiros com tamanho n (digitado pelo usuário).
+b) Obtenha os gráficos dos números de comparações entre
+chaves e de movimentações realizadas nos algoritmos
+considerando-se pelo menos 5 diferentes valores de n para:
+(1) vetores de entrada em ordem crescente
+(2) vetores de entrada em ordem decrescente
+(3) vetores de entrada com valores aleatórios
+c) Analise os algoritmos através dos gráficos obtidos,
+comentando se os resultados são condizentes com a análise
+assintótica de cada algoritmo.
+d) Baseado nos resultados obtidos, comente qual (ou quais)
+algoritmo(s) de ordenação é(são) mais apropriado(s) para
+cada tipo de vetor.
 
  
