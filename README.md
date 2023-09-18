@@ -96,5 +96,14 @@ assintótica de cada algoritmo.
 d) Baseado nos resultados obtidos, comente qual (ou quais)
 algoritmo(s) de ordenação é(são) mais apropriado(s) para
 cada tipo de vetor.
-
+  10. Seja um programa que tenha três funções para a manipulação de matrizes de ponto
+flutuante: i) uma que imprima a soma de duas matrizes A e B; ii) outra que calcule o
+resultado da multiplicação de duas matrizes A e B, e iii) uma terceira que calcule a
+soma do traço da matriz A com o traço da matriz B. Todas as matrizes são quadradas,
+isto é, tem n linhas e n colunas. Pede-se  a. Implemente as 3 funções. As funções, que são chamadas no programa
+principal, recebem o valor de n e as matrizes A e B. As funções devem
+implementar o que foi pedido de forma eficiente em relação ao tempo de
+execução.
+b. Faça a análise assintótica (notação O) de cada uma das funções. Justifique
+as respostas.
  
