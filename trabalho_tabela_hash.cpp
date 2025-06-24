@@ -1,7 +1,5 @@
 #include <iostream>
-#include <list>
 #include <string>
-#include <functional>
 
 using namespace std;
 
@@ -10,65 +8,86 @@ struct Livro {
     string titulo;
     string autor;
     int ano;
+    Livro* prox;
 
-    Livro(string i, string t, string a, int an) : isbn(i), titulo(t), autor(a), ano(an) {}
+    Livro(string i, string t, string a, int an) : isbn(i), titulo(t), autor(a), ano(an), prox(nullptr) {}
 };
 
 class BibliotecaHash {
 private:
     static const int TABLE_SIZE = 10;
-    list<Livro>* table[TABLE_SIZE];
+    Livro* table[TABLE_SIZE];
 
     int hashFunction(string isbn) {
-        hash<string> hash_fn;
-        return hash_fn(isbn) % TABLE_SIZE;
+        int soma = 0;
+        for (char c : isbn) {
+            soma += static_cast<int>(c);
+        }
+        return soma % TABLE_SIZE;
     }
 
 public:
     BibliotecaHash() {
         for (int i = 0; i < TABLE_SIZE; i++) {
-            table[i] = new list<Livro>;
+            table[i] = nullptr;
         }
     }
 
     ~BibliotecaHash() {
         for (int i = 0; i < TABLE_SIZE; i++) {
-            delete table[i];
+            Livro* atual = table[i];
+            while (atual != nullptr) {
+                Livro* temp = atual;
+                atual = atual->prox;
+                delete temp;
+            }
         }
     }
 
-    void inserirLivro(Livro livro) {
-        int index = hashFunction(livro.isbn);
-        table[index]->push_back(livro);
+    void inserirLivro(Livro* livro) {
+        int index = hashFunction(livro->isbn);
+        livro->prox = table[index];
+        table[index] = livro;
         cout << "Livro inserido com sucesso!\n";
     }
 
     void removerLivro(string isbn) {
         int index = hashFunction(isbn);
-        auto& lista = *table[index];
+        Livro* atual = table[index];
+        Livro* anterior = nullptr;
 
-        for (auto it = lista.begin(); it != lista.end(); ++it) {
-            if (it->isbn == isbn) {
-                lista.erase(it);
+        while (atual != nullptr) {
+            if (atual->isbn == isbn) {
+                //cout << "entrou";
+                if (anterior == nullptr) {
+                    table[index] = atual->prox;
+                } else {
+                    anterior->prox = atual->prox;
+                }
+                delete atual;
                 cout << "Livro removido com sucesso!\n";
                 return;
             }
+            anterior = atual;
+            atual = atual->prox;
         }
         cout << "Livro nao encontrado.\n";
     }
 
     void consultarLivro(string isbn) {
         int index = hashFunction(isbn);
-        auto& lista = *table[index];
+        Livro* atual = table[index];
 
-        for (auto& livro : lista) {
-            if (livro.isbn == isbn) {
-                cout << "\nISBN: " << livro.isbn
-                     << "\nTitulo: " << livro.titulo
-                     << "\nAutor: " << livro.autor
-                     << "\nAno: " << livro.ano << "\n\n";
+        while (atual != nullptr) {
+            
+            if (atual->isbn == isbn) {
+                cout << "\nISBN: " << atual->isbn
+                     << "\nTitulo: " << atual->titulo
+                     << "\nAutor: " << atual->autor
+                     << "\nAno: " << atual->ano << "\n\n";
                 return;
             }
+            atual = atual->prox;
         }
         cout << "Livro nao encontrado.\n";
     }
@@ -94,15 +113,16 @@ public:
                     cout << "Titulo: "; getline(cin, titulo);
                     cout << "Autor: "; getline(cin, autor);
                     cout << "Ano: "; cin >> ano;
-                    inserirLivro(Livro(isbn, titulo, autor, ano));
+                    cin.ignore();
+                    inserirLivro(new Livro(isbn, titulo, autor, ano));
                     break;
                 case 2:
-                    cout << "ISBN do livro a remover: "; 
+                    cout << "ISBN do livro a remover: ";
                     getline(cin, isbn);
                     removerLivro(isbn);
                     break;
                 case 3:
-                    cout << "ISBN do livro a consultar: "; 
+                    cout << "ISBN do livro a consultar: ";
                     getline(cin, isbn);
                     consultarLivro(isbn);
                     break;
