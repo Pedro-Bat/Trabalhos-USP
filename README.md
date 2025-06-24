@@ -106,4 +106,18 @@ implementar o que foi pedido de forma eficiente em relação ao tempo de
 execução.
 b. Faça a análise assintótica (notação O) de cada uma das funções. Justifique
 as respostas.
+
+                                                     TRABALHO AED
+ Seja um problema qualquer que envolva a manipulação de registros. Considere que
+ se deseja um programa que tenha um menu pelo qual seja possível inserir, remover
+ e consultar registros. A inserção e remoção devem ser feitas para um registro de
+ cada vez. Já a consulta deve ser baseada em uma chave de busca digitada pelo
+ usuário.
+ Pede-se:
+1. Descreva o problema (aplicação) de maneira resumida;
+2. Implemente o programa em C++ utilizando Tabelas Hash com
+endereçamento encadeado (ou seja, usando listas encadeadas);
+3. Implemente o programa em C++ utilizando Árvores Binárias de Busca ou
+Árvores AVL;
+      
  
