@@ -1,123 +1,173 @@
-# Trabalhos-IC-USP
-Trabalhos feitos na disciplina de introdução a computação
+# Trabalhos - IC - USP  
+**Trabalhos desenvolvidos na disciplina de Introdução à Computação**
 
+---
 
-                                                     TRABALHOS IC1
-1. Faça um programa que leia 5 números. Este programa deve ter um menu que permita ao
-usuário escolher qual opção de cálculo ele deseja realizar: média aritmética simples,
-média ponderada (ler os pesos associados a cada nota que serão informados pelo
-usuário), desvio padrão, maior valor e menor valor. A leitura dos 5 valores também deve
-ser uma das opções do menu.
+## 📘 IC1 — Trabalhos
 
-2. Faça um programa para o “jogo de adivinhar um número”. O computador deve sortear
-um número entre 0 e 100 e pedir para o usuário tentar adivinhar este número. O usuário
-vai dizer o seu palpite, e o computador deve responder, se ele é maior ou menor que o
-número que ele sorteou. O programa termina somente quando o usuário acertar
-exatamente qual o número que o computador tinha sorteado, escrevendo uma mensagem
-de felicitações para o nosso usuário e indicando o número total de tentativas feitas.
+### 1. Programa de Cálculos com 5 Números
+Faça um programa que:
 
-3. Faça um programa que leia dois números n e m e:
- Crie e leia um vetor de inteiros de n posições;
- Crie e leia um vetor de inteiros de m posições;
- Crie e construa um vetor de inteiros que seja a interseção entre os dois vetores 
-anteriores, ou seja, que contém apenas os números que estão em
-ambos os vetores. Não deve conter números repetidos.
+- Leia 5 números
+- Mostre um menu com as opções:
+  - Média aritmética simples
+  - Média ponderada (com pesos informados pelo usuário)
+  - Desvio padrão
+  - Maior valor
+  - Menor valor
+  - Releitura dos 5 valores
 
-                                                     TAREFAS IC2
-4. Escrever um programa em C++ que
-// A. Possua uma estrutura chamada estudante com os seguinte elementos
-// Numero USP
-// Nota da primeira prova
-// Nota da segunda prova
-// Média final
-// B. Tenha um menu que permita realizar as seguintes operações
-// 1. Entrar com dados de um estudante (número USP e notas das provas)
-// 2. Mostrar dados de um estudante
-// 3. Mostrar a média e desvio padrão para as médias finais de todos os estudantes cadastrados
-// 4. Sair
+---
 
-5. Utilizando a Lib "ctime" fazer testes de velocidade de execução de funções que calculam a 
-média aritmética de dois  vetores de n tamanho e plotar os resultados em gráfico.
+### 2. Jogo de Adivinhação
+Desenvolva um jogo onde:
 
-6. Seja uma função (subrotina) que, dado um vetor v com n inteiros e um inteiro x
-(chave de busca), retorne o índice da primeira ocorrência de x em v; caso não
-encontre x no vetor v, a função deve retornar o valor -1. O número de operações
-primitivas desta função deve ser constante para o melhor caso, enquanto que para
-o pior caso, o número de operações primitivas deve ser linear em n. Pede-se:
-a) Implemente a função em C++.
-b) Faça a análise por operações primitivas da função.
+- O computador sorteia um número entre 0 e 100
+- O usuário tenta adivinhar o número
+- O computador informa se o palpite é maior ou menor que o número sorteado
+- O programa termina quando o usuário acerta, mostrando uma mensagem de parabéns e o número de tentativas
 
-7. A prefeitura de uma cidade faz uma pesquisa sobre os domicílios na área urbana. Em
-cada domicilio, são coletados dados sobre renda média mensal, número total de
-ocupantes, endereço e número de ocupantes em idade escolar. Faça:
-a. um programa que leia estes dados, faça a ordenação por inserção direta e salve
-os dados ordenados em um arquivo. Os dados devem ser ordenados de acordo
-com o endereço.
-b. um programa que leia o arquivo e tenha um menu que permita:
-i. Listar todos os domicílios, com as respectivas informações;
-ii. Buscar os dados do domicílio quando um determinado endereço é
-digitado. Para a busca, deve-se utilizar busca binária;
-iii. Sair.
+---
 
-8. Seja um registro (estrutura) com os campos: nome (string) e número de inscrição (int).
-Pede-se
-a. Faça uma função para ordenar, via QuickSort, um vetor com N registros. A
-ordenação deve ser de acordo com o número de inscrição;
-b. Imprima na tela o número de comparações entre chaves, movimentações de
-registros e chamadas da função recursiva realizadas pelo algoritmo. Utilize
-contadores para isso.
-c. Mostre os números de comparações e movimentações e desenhe as respectivas
-árvores de recursão para as 3 sequências a seguir (no qual apenas o número de
-inscrição é apresentado):
- 45 56 12 43 95 19 8 67
- 8 12 19 43 45 56 67 95
- 95 67 56 45 43 19 12 8
- 
- 9. Sejam os seguintes algoritmos de ordenação:
- Inserção direta
- Inserção binária
- Seleção
- Bubblesort
- Heapsort
- Fusão
- QuickSort
-Pede-se:
-a) Implemente os algoritmos relacionados para vetores de
-inteiros com tamanho n (digitado pelo usuário).
-b) Obtenha os gráficos dos números de comparações entre
-chaves e de movimentações realizadas nos algoritmos
-considerando-se pelo menos 5 diferentes valores de n para:
-(1) vetores de entrada em ordem crescente
-(2) vetores de entrada em ordem decrescente
-(3) vetores de entrada com valores aleatórios
-c) Analise os algoritmos através dos gráficos obtidos,
-comentando se os resultados são condizentes com a análise
-assintótica de cada algoritmo.
-d) Baseado nos resultados obtidos, comente qual (ou quais)
-algoritmo(s) de ordenação é(são) mais apropriado(s) para
-cada tipo de vetor.
-  10. Seja um programa que tenha três funções para a manipulação de matrizes de ponto
-flutuante: i) uma que imprima a soma de duas matrizes A e B; ii) outra que calcule o
-resultado da multiplicação de duas matrizes A e B, e iii) uma terceira que calcule a
-soma do traço da matriz A com o traço da matriz B. Todas as matrizes são quadradas,
-isto é, tem n linhas e n colunas. Pede-se  a. Implemente as 3 funções. As funções, que são chamadas no programa
-principal, recebem o valor de n e as matrizes A e B. As funções devem
-implementar o que foi pedido de forma eficiente em relação ao tempo de
-execução.
-b. Faça a análise assintótica (notação O) de cada uma das funções. Justifique
-as respostas.
+### 3. Interseção de Vetores
+O programa deve:
 
-                                                     TRABALHO AED
- Seja um problema qualquer que envolva a manipulação de registros. Considere que
- se deseja um programa que tenha um menu pelo qual seja possível inserir, remover
- e consultar registros. A inserção e remoção devem ser feitas para um registro de
- cada vez. Já a consulta deve ser baseada em uma chave de busca digitada pelo
- usuário.
- Pede-se:
-1. Descreva o problema (aplicação) de maneira resumida;
-2. Implemente o programa em C++ utilizando Tabelas Hash com
-endereçamento encadeado (ou seja, usando listas encadeadas);
-3. Implemente o programa em C++ utilizando Árvores Binárias de Busca ou
-Árvores AVL;
-      
- 
+- Ler dois números `n` e `m`
+- Ler dois vetores de tamanho `n` e `m`
+- Criar um vetor com a interseção dos dois vetores (sem elementos repetidos)
+
+---
+
+## 📗 IC2 — Tarefas
+
+### 4. Estrutura de Estudante
+Programa em C++ que:
+
+- Define a estrutura `estudante`:
+  ```cpp
+  struct Estudante {
+      int numeroUSP;
+      float nota1;
+      float nota2;
+      float mediaFinal;
+  };
+  ```
+
+- Mostra menu com as opções:
+  1. Inserir dados de um estudante
+  2. Mostrar dados de um estudante
+  3. Calcular média e desvio padrão das médias finais
+  4. Sair
+
+---
+
+### 5. Teste de Desempenho com `ctime`
+- Utilize a biblioteca `ctime` para medir o tempo de execução de funções que calculam a média de dois vetores.
+- Plote os tempos de execução em gráfico.
+
+---
+
+### 6. Busca por Índice
+- Implemente uma função que, dado um vetor `v` de inteiros e uma chave `x`, retorne o índice da **primeira ocorrência** de `x` ou `-1` se não existir.
+- A função deve ter:
+  - Melhor caso: tempo constante
+  - Pior caso: tempo linear
+
+---
+
+### 7. Pesquisa Domiciliar
+Dados coletados:
+- Renda média mensal
+- Número de ocupantes
+- Endereço
+- Ocupantes em idade escolar
+
+#### a) Parte 1:
+- Ordenar os dados por endereço (inserção direta)
+- Salvar em arquivo
+
+#### b) Parte 2:
+Programa com menu:
+1. Listar todos os domicílios  
+2. Buscar por endereço (utilizar busca binária)  
+3. Sair
+
+---
+
+### 8. QuickSort com Registros
+- Estrutura: `nome (string)` e `número de inscrição (int)`
+- Implementar QuickSort com ordenação por número de inscrição
+- Contabilizar:
+  - Comparações
+  - Movimentações
+  - Chamadas recursivas
+- Testar com:
+  - `45 56 12 43 95 19 8 67`
+  - `8 12 19 43 45 56 67 95`
+  - `95 67 56 45 43 19 12 8`
+
+---
+
+### 9. Comparação de Algoritmos de Ordenação
+Algoritmos:
+
+- Inserção direta  
+- Inserção binária  
+- Seleção  
+- BubbleSort  
+- HeapSort  
+- MergeSort (fusão)  
+- QuickSort  
+
+#### Tarefas:
+
+a) Implementar os algoritmos  
+b) Medir comparações e movimentações em 5 tamanhos `n`, com entradas:
+- Ordem crescente
+- Ordem decrescente
+- Aleatória
+
+c) Analisar os gráficos  
+d) Concluir quais algoritmos são mais adequados para cada cenário
+
+---
+
+### 10. Manipulação de Matrizes
+Funções com matrizes quadradas (n x n):
+
+1. Soma de duas matrizes A + B  
+2. Multiplicação A × B  
+3. Soma dos traços de A e B
+
+#### a) Implemente as funções  
+#### b) Faça a análise assintótica (notação O)
+
+---
+
+## 📙 Trabalho Final — AED
+
+### Descrição
+Criação de um programa para manipular **registros** com um menu contendo:
+
+- Inserção de um registro
+- Remoção de um registro
+- Consulta baseada em chave
+
+### Etapas:
+
+1. Descrever resumidamente o problema  
+2. Implementar em C++ com:
+   - **Tabelas Hash com endereçamento encadeado**
+3. Implementar em C++ com:
+   - **Árvores Binárias de Busca** ou **Árvores AVL**
+
+---
+
+## ⚛️ Trabalho Fisica 1
+Criação de uma Simulação de Movimento Circular em 3D
+- Código feito em python com o uso das seguintes libs:
+   1. Vpython
+   2. numpy
+#Output
+![image](https://github.com/user-attachments/assets/7653061c-0749-4f5b-bf34-c1fbe8dbad9c)
+
