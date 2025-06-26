@@ -168,6 +168,7 @@ Criação de uma Simulação de Movimento Circular em 3D
 - Código feito em python com o uso das seguintes libs:
    1. Vpython
    2. numpy
-#Output
+---
+# Output
 ![image](https://github.com/user-attachments/assets/7653061c-0749-4f5b-bf34-c1fbe8dbad9c)
 
